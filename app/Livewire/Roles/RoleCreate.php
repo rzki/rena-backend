@@ -24,7 +24,7 @@ class RoleCreate extends Component
         ]);
         return $this->redirectRoute('roles.index', navigate:true);
     }
-    #[Title('Create New Role')]
+    #[Title('Tambah Role')]
     public function render()
     {
         return view('livewire.roles.role-create');

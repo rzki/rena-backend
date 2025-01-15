@@ -1,7 +1,7 @@
 <div>
     <div class="main py-4">
         <div class="pagetitle ps-3 fw-bold">
-            <h1 class="mb-3 h2"><strong>{{ __('Create New Role') }}</strong></h1>
+            <h1 class="mb-3 h2"><strong>{{ __('Tambah Role') }}</strong></h1>
         </div>
         <div class="row">
             <div class="col-12 col-xl-12">
@@ -11,7 +11,7 @@
                             <div class="row mb-5">
                                 <div class="col">
                                     <a href="{{ route('roles.index') }}" class="btn btn-primary text-white"><i
-                                            class="fas fa-arrow-left"></i> {{ __('Back') }}</a>
+                                            class="fas fa-arrow-left"></i> {{ __('Kembali') }}</a>
                                 </div>
                             </div>
                             <div class="row">
@@ -19,7 +19,7 @@
                                     <form wire:submit='create'>
                                         <div class="row">
                                             <div class="form-group mb-3">
-                                                <label for="name" class="form-label">{{ __('Name') }}</label>
+                                                <label for="name" class="form-label">{{ __('Nama') }}</label>
                                                 <input type="text" name="name" id="name" class="form-control"
                                                     wire:model='name'>
                                             </div>

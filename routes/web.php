@@ -2,11 +2,15 @@
 
 use App\Livewire\Dashboard;
 use App\Livewire\Auth\Login;
+use App\Livewire\QR\QrEdit;
+use App\Livewire\QR\QrGenerate;
+use App\Livewire\QR\QrIndex;
 use App\Livewire\Auth\Logout;
-use App\Livewire\Roles\RoleCreate;
+use App\Livewire\QR\QrCreate;
 use App\Livewire\Roles\RoleEdit;
 use App\Livewire\Roles\RoleIndex;
 use App\Livewire\Users\UserIndex;
+use App\Livewire\Roles\RoleCreate;
 use App\Livewire\Users\UserCreate;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -22,10 +26,10 @@ Route::middleware('auth')->group(function () {
     Route::get('roles', RoleIndex::class)->name('roles.index');
     Route::get('roles/create', RoleCreate::class)->name('roles.create');
     Route::get('roles/{roleId}/edit', RoleEdit::class)->name('roles.edit');
-    Route::view('about', 'about')->name('about');
-
-    Route::get('users', [\App\Http\Controllers\UserController::class, 'index'])->name('users.index');
-
+    Route::get('qr-code', QrIndex::class)->name('qrcode.index');
+    Route::get('qr-code/create', QrCreate::class)->name('qrcode.create');
+    Route::get('qr-code/{qrId}/edit', QrEdit::class)->name('qrcode.edit');
+    Route::get('qr-code/generate', QrGenerate::class)->name('qrcode.generate');
     Route::get('profile', [\App\Http\Controllers\ProfileController::class, 'show'])->name('profile.show');
     Route::put('profile', [\App\Http\Controllers\ProfileController::class, 'update'])->name('profile.update');
     Route::get('logout', Logout::class)->name('logout');

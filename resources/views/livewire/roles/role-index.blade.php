@@ -12,14 +12,14 @@
                                 <div class="pb-3 col d-flex justify-content-end">
                                     <a href="{{ route('roles.create') }}" class="ml-3 text-white btn btn-success"><i
                                             class="me-1 fas fa-plus-circle"
-                                            aria-hidden="true"></i>{{ __(' New User') }}</a>
+                                            aria-hidden="true"></i>{{ __(' Tambah Role') }}</a>
                                 </div>
                                 <div class="table-wrapper table-responsive-md">
                                     <table class="table text-center text-black striped-table table-bordered">
                                         <thead>
                                             <tr>
                                                 <th>{{ __('Role') }}</th>
-                                                <th>{{ __('Action') }}</th>
+                                                <th>{{ __('Aksi') }}</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -69,8 +69,8 @@
     <script>
         window.addEventListener('delete-confirmation', event => {
             Swal.fire({
-                title: "Are you sure?",
-                text: "Role will be deleted permanently!",
+                title: "Apakah anda yakin?",
+                text: "Role akan dihapus permanen!",
                 icon: "warning",
                 showCancelButton: true,
                 confirmButtonColor: "#3085d6",
