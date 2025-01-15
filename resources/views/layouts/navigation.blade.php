@@ -1,9 +1,10 @@
 <ul class="nav flex-column pt-3 pt-md-0">
     <li class="nav-item">
         <a href="{{ route('dashboard') }}" class="nav-link d-flex align-items-center justify-content-center">
-            <p class="fs-5 m-0 sidebar-text">
+            <img src="{{ asset('images/brand/Rena.webp') }}" class="w-50" alt="">
+            {{-- <p class="fs-5 m-0 sidebar-text">
                 {{ config('app.name') }}
-            </p>
+            </p> --}}
         </a>
     </li>
 
@@ -15,13 +16,12 @@
             <span class="sidebar-text">{{ __('Dashboard') }}</span>
         </a>
     </li>
-
-    <li class="nav-item {{ request()->routeIs('users.*') ? 'active' : '' }}">
-        <a href="{{ route('users.index') }}" class="nav-link">
+    <li class="nav-item {{ request()->routeIs('qrcode.*') ? 'active' : '' }}">
+        <a href="{{ route('qrcode.index') }}" class="nav-link">
             <span class="sidebar-icon me-3">
-                <i class="fas fa-user-alt fa-fw"></i>
+                    <i class="fas fa-qrcode fa-fw"></i>
             </span>
-            <span class="sidebar-text">{{ __('Users') }}</span>
+            <span class="sidebar-text">{{ __('QR Codes') }}</span>
         </a>
     </li>
     <li class="nav-item">

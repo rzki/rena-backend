@@ -73,3 +73,14 @@
 .top-2 {
     top: 0rem;
 }
+
+/* Sidebar BG Color */
+#sidebarMenu{
+    background-color: #2A3991 !important;
+}
+.sidebar .nav-item.active>.nav-link, .sidebar .nav-item>.nav-link:hover{
+    background-color: #1A237E !important;
+}
+.navbar .navbar-nav .nav-link.dropdown-toggle:hover{
+    background-color: none !important;
+}

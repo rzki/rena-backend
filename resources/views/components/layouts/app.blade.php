@@ -13,6 +13,7 @@
 
     <!-- Scripts -->
     @vite('resources/js/app.js')
+    <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/fontawesome/css/fontawesome.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/fontawesome/css/regular.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/fontawesome/css/solid.min.css') }}">
