@@ -18,7 +18,7 @@
                                     <table class="table text-center text-black striped-table table-bordered">
                                         <thead>
                                             <tr>
-                                                <th>{{ __('Name') }}</th>
+                                                <th>{{ __('Nama') }}</th>
                                                 <th>{{ __('Merk') }}</th>
                                                 <th>{{ __('Tipe') }}</th>
                                                 <th>{{ __('No. Seri') }}</th>
@@ -30,6 +30,24 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            @foreach ($qrs as $qr)
+                                                <tr>
+                                                    <td>{{ $qr->name ?? '' }}</td>
+                                                    <td>{{ $qr->brand ?? '' }}</td>
+                                                    <td>{{ $qr->model ?? '' }}</td>
+                                                    <td>{{ $qr->serialNumber ?? '' }}</td>
+                                                    <td>{{ $qr->location ?? '' }}</td>
+                                                    <td>{{ date('d-m-Y', strtotime($qr->last_calibrated_at)) ?? '' }}</td>
+                                                    <td>{{ $qr->result ?? '' }}</td>
+                                                    <td>{{ $qr->status ?? '' }}</td>
+                                                    <td>
+                                                        <a href="{{ route('qrcode.edit', $qr->deviceId) }}" class="btn btn-primary"><i class="fas fa-edit"></i></a>
+                                                        <a href="{{ route('qrcode.detail', $qr->deviceId) }}" class="btn btn-info"><i class="fas fa-eye"></i></a>
+                                                        <button wire:click.prevent="deleteConfirm('{{ $qr->deviceId }}')" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                                                    </td>
+
+                                                </tr>
+                                            @endforeach
                                         </tbody>
                                     </table>
                                     <div class="mt-4 row">
@@ -63,8 +81,8 @@
     <script>
         window.addEventListener('delete-confirmation', event => {
             Swal.fire({
-                title: "Are you sure?",
-                text: "QR will be deleted permanently!",
+                title: "Apakah anda yakin?",
+                text: "Data QR akan dihapus permanen!",
                 icon: "warning",
                 showCancelButton: true,
                 confirmButtonColor: "#3085d6",

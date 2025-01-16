@@ -2,6 +2,7 @@
 
 use App\Livewire\Dashboard;
 use App\Livewire\Auth\Login;
+use App\Livewire\QR\QrDetail;
 use App\Livewire\QR\QrEdit;
 use App\Livewire\QR\QrGenerate;
 use App\Livewire\QR\QrIndex;
@@ -16,7 +17,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', Login::class)->name('login');
-
+Route::get('qr-code/{qrId}/detail', QrDetail::class)->name('qrcode.detail');
 
 Route::middleware('auth')->group(function () {
     Route::get('dashboard', Dashboard::class)->name('dashboard');
