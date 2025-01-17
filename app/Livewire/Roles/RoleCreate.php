@@ -16,7 +16,7 @@ class RoleCreate extends Component
         ]);
         session()->flash('alert', [
             'type' => 'success',
-            'title' => 'Role created successfully!',
+            'title' => 'Role berhasil dibuat!',
             'toast'=> false,
             'position'=> 'center',
             'timer'=> 1500,

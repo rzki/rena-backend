@@ -30,7 +30,7 @@ class UserIndex extends Component
         $this->user->delete();
         session()->flash('alert', [
             'type' => 'success',
-            'title' => 'User deleted successfully!',
+            'title' => 'User berhasil dihapus!',
             'toast' => false,
             'position' => 'center',
             'timer' => 1500,

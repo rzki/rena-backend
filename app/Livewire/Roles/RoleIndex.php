@@ -29,7 +29,7 @@ class RoleIndex extends Component
         $this->role->delete();
         session()->flash('alert', [
             'type' => 'success',
-            'title' => 'Role deleted successfully!',
+            'title' => 'Role berhasil dihapus!',
             'toast' => false,
             'position' => 'center',
             'timer' => 1500,
