@@ -2,6 +2,7 @@
 
 use App\Livewire\Dashboard;
 use App\Livewire\Auth\Login;
+use App\Livewire\MyProfile;
 use App\Livewire\QR\QrDetail;
 use App\Livewire\QR\QrEdit;
 use App\Livewire\QR\QrGenerate;
@@ -31,7 +32,6 @@ Route::middleware('auth')->group(function () {
     Route::get('qr-code/create', QrCreate::class)->name('qrcode.create');
     Route::get('qr-code/{qrId}/edit', QrEdit::class)->name('qrcode.edit');
     Route::get('qr-code/generate', QrGenerate::class)->name('qrcode.generate');
-    Route::get('profile', [\App\Http\Controllers\ProfileController::class, 'show'])->name('profile.show');
-    Route::put('profile', [\App\Http\Controllers\ProfileController::class, 'update'])->name('profile.update');
+    Route::get('profile', MyProfile::class)->name('profile.show');
     Route::get('logout', Logout::class)->name('logout');
 });
