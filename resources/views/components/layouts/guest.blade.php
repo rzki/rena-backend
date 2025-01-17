@@ -10,6 +10,7 @@
 
     <!-- Styles -->
     @vite('resources/sass/app.scss')
+    <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/responsive-widths.min.css') }}">
 </head>
 
