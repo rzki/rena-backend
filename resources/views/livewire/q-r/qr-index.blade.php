@@ -26,7 +26,7 @@
                                                 <th>{{ __('Kalibrasi Terakhir') }}</th>
                                                 <th>{{ __('Hasil') }}</th>
                                                 <th>{{ __('Status') }}</th>
-                                                <th>{{ __('Action') }}</th>
+                                                <th>{{ __('Aksi') }}</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -41,8 +41,8 @@
                                                     <td>{{ $qr->result ?? '' }}</td>
                                                     <td>{{ $qr->status ?? '' }}</td>
                                                     <td>
-                                                        <a href="{{ route('qrcode.edit', $qr->deviceId) }}" class="btn btn-primary"><i class="fas fa-edit"></i></a>
                                                         <a href="{{ route('qrcode.detail', $qr->deviceId) }}" class="btn btn-info"><i class="fas fa-eye"></i></a>
+                                                        <a href="{{ route('qrcode.edit', $qr->deviceId) }}" class="btn btn-primary"><i class="fas fa-edit"></i></a>
                                                         <button wire:click.prevent="deleteConfirm('{{ $qr->deviceId }}')" class="btn btn-danger"><i class="fas fa-trash"></i></button>
                                                     </td>
 

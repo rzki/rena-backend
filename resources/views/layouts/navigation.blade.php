@@ -23,7 +23,7 @@
             <span class="sidebar-text">{{ __('QR Codes') }}</span>
         </a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item {{ request()->routeIs('users.*') || request()->routeIs('roles.*') ? 'active' : '' }}">
         <span class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse"
             data-bs-target="#admin-settings">
             <span>

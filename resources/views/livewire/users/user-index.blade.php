@@ -21,7 +21,7 @@
                                                 <th>{{ __('Nama') }}</th>
                                                 <th>{{ __('Email') }}</th>
                                                 <th>{{ __('Role') }}</th>
-                                                <th>{{ __('Akssi') }}</th>
+                                                <th>{{ __('Aksi') }}</th>
                                             </tr>
                                         </thead>
                                         <tbody>
