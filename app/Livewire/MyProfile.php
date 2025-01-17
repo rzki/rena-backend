@@ -10,12 +10,12 @@ use Illuminate\Support\Facades\Hash;
 
 class MyProfile extends Component
 {
-    public $nama, $email;
+    public $name, $email;
     #[Validate('nullable|string|confirmed|min:8')]
     public $password;
     public function mount()
     {
-        $this->nama     = Auth::user()->name;
+        $this->name     = Auth::user()->name;
         $this->email    = Auth::user()->email;
         $this->username = Auth::user()->username;
     }
