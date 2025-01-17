@@ -51,7 +51,7 @@
                         </div>
 
                         <div class="d-grid">
-                            <button type="submit" class="btn btn-rena">{{ __('Sign in') }}</button>
+                            <button type="submit" class="btn btn-rena text-white">{{ __('Sign in') }}</button>
                         </div>
                     </form>
                 </div>
