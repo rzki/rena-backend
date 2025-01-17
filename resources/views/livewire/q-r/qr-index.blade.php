@@ -14,7 +14,7 @@
                                             class="me-1 fas fa-plus-circle"
                                             aria-hidden="true"></i>{{ __(' Tambah Kode QR') }}</a>
                                 </div>
-                                <div class="table-wrapper table-responsive-md">
+                                <div class="table-responsive-lg">
                                     <table class="table text-center text-black striped-table table-bordered">
                                         <thead>
                                             <tr>

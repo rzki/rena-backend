@@ -1,17 +1,16 @@
 <ul class="nav flex-column pt-3 pt-md-0">
     <li class="nav-item">
         <a href="{{ route('dashboard') }}" class="nav-link d-flex align-items-center justify-content-center">
-            <img src="{{ asset('images/brand/Rena.webp') }}" class="w-50" alt="">
-            {{-- <p class="fs-5 m-0 sidebar-text">
-                {{ config('app.name') }}
-            </p> --}}
+            <div class="logo text-center">
+                <img src="{{ asset('images/brand/Rena.webp') }}" class="w-50" alt="">
+            </div>
         </a>
     </li>
 
-    <li class="nav-item {{ request()->routeIs('dashboard') ? 'active' : '' }}">
+    <li class="nav-item mt-5 {{ request()->routeIs('dashboard') ? 'active' : '' }} ">
         <a href="{{ route('dashboard') }}" class="nav-link">
             <span class="sidebar-icon me-3">
-                    <i class="fas fa-home fa-fw"></i>
+                    <i class="fas fa-home text-white"></i>
             </span>
             <span class="sidebar-text">{{ __('Dashboard') }}</span>
         </a>
@@ -19,7 +18,7 @@
     <li class="nav-item {{ request()->routeIs('qrcode.*') ? 'active' : '' }}">
         <a href="{{ route('qrcode.index') }}" class="nav-link">
             <span class="sidebar-icon me-3">
-                    <i class="fas fa-qrcode fa-fw"></i>
+                    <i class="fas fa-qrcode text-white"></i>
             </span>
             <span class="sidebar-text">{{ __('QR Codes') }}</span>
         </a>
@@ -29,7 +28,7 @@
             data-bs-target="#admin-settings">
             <span>
                 <span class="sidebar-icon me-3">
-                    <i class="fas fa-cog fa-fw"></i>
+                    <i class="fas fa-cog text-white"></i>
                 </span>
                 <span class="sidebar-text">{{ __('Admin Settings') }}</span>
             </span>
@@ -47,7 +46,7 @@
                 <li class="nav-item {{ request()->routeIs('users.*') ? 'active' : '' }}">
                     <a href="{{ route('users.index') }}" class="nav-link">
                         <span class="sidebar-icon me-3">
-                            <i class="fas fa-users"></i>
+                            <i class="fas fa-users text-white"></i>
                         </span>
                         <span class="sidebar-text">{{ __('Users') }}</span>
                     </a>
@@ -55,7 +54,7 @@
                 <li class="nav-item {{ request()->routeIs('roles.*') ? 'active' : '' }}">
                     <a href="{{ route('roles.index') }}" class="nav-link">
                         <span class="sidebar-icon me-3">
-                            <i class="fas fa-user-gear"></i>
+                            <i class="fas fa-user-gear text-white"></i>
                         </span>
                         <span class="sidebar-text">{{ __('Roles') }}</span>
                     </a>

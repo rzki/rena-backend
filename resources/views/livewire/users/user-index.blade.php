@@ -14,7 +14,7 @@
                                             class="me-1 fas fa-plus-circle"
                                             aria-hidden="true"></i>{{ __(' Tambah Pengguna') }}</a>
                                 </div>
-                                <div class="table-wrapper table-responsive-md">
+                                <div class="  table-responsive-md">
                                     <table class="table text-center text-black striped-table table-bordered">
                                         <thead>
                                             <tr>
