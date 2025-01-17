@@ -14,7 +14,7 @@
                             <label for="email">{{ __('Email') }}</label>
                             <div class="input-group">
                                 <span class="input-group-text">
-                                    <i class="fas fa-envelope text-white"></i>
+                                    <i class="fas fa-envelope text-black"></i>
                                 </span>
                                 <input name="email" type="email" class="form-control" placeholder="{{ __('Email') }}"
                                     id="email" value="{{ old('email') }}" wire:model="email" required autofocus>
@@ -30,7 +30,7 @@
                                 <label for="password">{{ __('Password') }}</label>
                                 <div class="input-group">
                                     <span class="input-group-text">
-                                        <i class="fas fa-lock text-white"></i>
+                                        <i class="fas fa-lock text-black"></i>
                                     </span>
                                     <input name="password" type="password" placeholder="{{ __('Password') }}"
                                         class="form-control" id="password" wire:model="password" required>
